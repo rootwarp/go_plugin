@@ -1,0 +1,8 @@
+plugins:
+  - name: jk-plugin
+    repo: github.com/rootwarp/dummy
+    desc: This plugin is just for development.
+
+  - name: hello-world
+    repo: github.com/rootwarp/helloworld
+    desc: Hello world!
