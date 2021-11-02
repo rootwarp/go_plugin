@@ -11,6 +11,7 @@ import (
 	"strings"
 	"testing"
 
+	git "github.com/go-git/go-git/v5"
 	yaml "gopkg.in/yaml.v2"
 )
 
@@ -142,4 +143,12 @@ func TestYml(t *testing.T) {
 
 	// TODO: Load repo.
 	// TODO: How to store load info?
+}
+
+func TestGitClone(t *testing.T) {
+	repo, err := git.PlainClone("./env", false, &git.CloneOptions{
+		URL: "https://github.com/rootwarp/env",
+	})
+
+	fmt.Printf("Result %+v, %+v", repo, err)
 }
